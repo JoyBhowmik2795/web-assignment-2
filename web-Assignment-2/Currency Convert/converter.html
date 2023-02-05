@@ -1,0 +1,166 @@
+<html>
+
+<head>
+  <title> Currency Converter </title>
+</head>
+
+<style>
+
+body{
+
+   background: #C0C0C0;
+
+}
+
+h1{
+
+   background: #00cc99;
+   text-align: center;
+   font-size: 38px;
+   padding: 20px 1em;
+   font-weight: bold;
+   margin-left: 35%;
+   margin-right: 35%;
+   cursor: pointer;
+   font-family: Times New Roman;
+
+}
+
+marquee{
+
+  background: #00FFFF;
+  font-size: 20px;
+  padding-top: 5px;
+  margin: -23px;
+  margin-left: 0%;
+  margin-right: 0%;
+  cursor: pointer;
+  
+
+}
+
+fieldset{
+
+  width: 45%;
+  margin: auto;
+  border: 1px solid #000;
+  text-align: left;
+  font-size: 20px;
+  font-family: lato,sans-serif;
+
+}
+
+input[type=number],[id]{
+
+    background: #fff;
+	border: 1px solid #000;
+	border-radius: 2px;
+	border-width: 1px;
+	color: #3645b;
+	font-size: 15px;
+	margin: 5px;
+	padding: 12px;
+	display: inline-block;
+
+}
+
+
+input[type=button]{
+
+  width: 80px;
+  height: 43px;
+  font-weight: bold;
+
+}
+
+input[type=reset]{
+
+  width: 95px;
+  height: 43px;
+  font-weight: bold;
+
+}
+
+
+
+
+</style>
+
+  <script>
+  
+     function currencyConverter(valNum){
+	 
+	     if(converter.taka.value <= 0)
+		 window.alert("Enter Value Greater Than 0");
+		 
+		   else{
+		   
+		     document.getElementById("dollar").value=(valNum/84.96).toFixed(2);
+			 document.getElementById("euro").value=(valNum/91.70).toFixed(2);
+			 document.getElementById("gbp").value=(valNum/110.45).toFixed(2);
+			 document.getElementById("riyal").value=(valNum/22.65).toFixed(2);
+			 document.getElementById("yuan").value=(valNum/12.14).toFixed(2);
+		   
+		   }
+		 
+	 
+	 }
+  
+  
+  </script>
+
+
+<body>
+
+<h1> Currency Converter </h1>
+
+<marquee>  Welcome To The Currency Converter </marquee>
+<br><br>
+<form name="converter">
+
+<fieldset>
+
+<label> Ban Currency(TAKA): </label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+<input type="number" name="taka" required >
+<input type="button" value="Convert" onclick="currencyConverter(converter.taka.value)">
+<br><br>
+
+<label> Dollar (American): <label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+<input id="dollar"> <br><br>
+
+<label> Europe (Euro): <label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+<input id="euro"> <br><br>
+
+<label> UK Pound (GBP): <label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+<input id="gbp"> <br><br>
+
+<label> Riyal (Saudi): <label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+<input id="riyal"> <br><br>
+
+<label> Yuan (China): <label>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+<input id="yuan"> <br><br>
+
+<input type="reset" value="Reset Form">
+
+<p align="center"> You Can Press Reset Button for reseting the form</p>
+</fieldset>
+
+</form>
+
+
+</body>
+
+
+</html>
